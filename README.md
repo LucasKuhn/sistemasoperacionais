@@ -1,6 +1,20 @@
 # Fundamentos de Sistemas Operacionais
 
-Um programa que crie um programa filho (utilizado por outro core do CPU), deixe ele rodar por 2 segundos, pausar por 2 segundos, rodar mais 2 segundos, e por fim terminar o processo:
+## Processo 
+- Segmento de código compilado [CS]
+- Segmento de dados [DS]
+- Segmento da pilha [BP + SP] (limitado 8k)
+- Heap (Alocação dinâmica)
+- Program Count [PC] 
+    
+## Comandos úteis
+
+-  `top` - Displays active processes. Press q to quit
+- `size file` - Displize file size
+- `ps` - Processos rodando
+- `ps -u lucaskuhn | wc -l` - Núemro de processos rodando
+    
+Faça um programa que crie um programa filho (utilizado por outro core do CPU), deixe ele rodar por 2 segundos, pausar por 2 segundos, rodar mais 2 segundos, e por fim terminar o processo:
 ```c
 #include <stdio.h>
 #include <unistd.h>
@@ -19,7 +33,7 @@ int main() {
    	 kill(id, SIGKILL);
 
     } else {
-     printf("cria %d ID: %d \n", getpid(), id);
+     printf("FILHO %d ID: %d \n", getpid(), id);
    	 while(1) {
    		 printf("*");
    	 }
