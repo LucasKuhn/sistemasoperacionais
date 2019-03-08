@@ -26,3 +26,21 @@ int main() {
 }
 
 ```
+
+![image](https://user-images.githubusercontent.com/26127185/54059276-587ef480-41d7-11e9-8783-71759cff2470.png)
+
+```c 
+#include <stdio.h>
+#include <unistd.h>
+
+int main() {
+  int id;
+  id = fork();
+  if ( id > 0 ) {
+    id = fork();
+    if ( id > 0 ) { 
+      id = fork();
+    }
+  }
+}
+```
