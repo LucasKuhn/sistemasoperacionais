@@ -13,7 +13,12 @@
 - `size file` - Displize file size
 - `ps` - Processos rodando
 - `ps -u lucaskuhn | wc -l` - Número de processos rodando
+- `ps -aH` - Lista arvores de processos
+- `pstree` - Lista arvore de processos para mac
 - `kill pid` - Mata o processo a partir do seu pid ( pode ser chegado com `ps`)
+- `kill -l` - Lista sinais que o kill recebe
+- `killall -9 nomedoprocesso` - Mata o processo
+
     
 Faça um programa que crie um programa filho (utilizado por outro core do CPU), deixe ele rodar por 2 segundos, pausar por 2 segundos, rodar mais 2 segundos, e por fim terminar o processo:
 ```c
