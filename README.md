@@ -1,12 +1,21 @@
 # Fundamentos de Sistemas Operacionais
 
+<!-- toc -->
+
+- [Processo](#Processo)
+- [Comandos úteis](#Comandos-uteis)
+- [Thread](#Thread)
+
+<!-- tocstop -->
+
 ## Processo 
-- Segmento de código compilado [CS]
-- Segmento de dados [DS]
-- Base da Pilha e Segmento da Pilha [BP + SP] (limitado 8k)
-- Heap (Alocação dinâmica)
-- Program Count [PC] 
-    
+- **PID**
+- **Segmento de código compilado [CS]** 
+- **Segmento de dados [DS]** - Variáveis globais e estáticas
+- **Base da Pilha e Segmento da Pilha [BP + SP]** (limitado 8k) - Variáveis locais
+- **Heap (Alocação dinâmica)** - Variáveis dinâmicas 
+- **Program Count [PC]**     
+
 ## Comandos úteis
 
 -  `top` - Displays active processes. Press q to quit
@@ -83,3 +92,7 @@ int main() {
   }
 }
 ```
+
+## Thread
+Grosso modo : Uma nova função
+
